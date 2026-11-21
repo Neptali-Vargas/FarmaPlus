@@ -1,0 +1,11 @@
+node_modules/
+frontend/dist/
+backend/data/
+*.log
+.env
+.env.*
+!.env.example
+/test-results/*
+!/test-results/dashboard.png
+!/test-results/mobile.png
+playwright-report/

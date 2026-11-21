@@ -1,0 +1,24 @@
+{
+  "name": "farmaplus",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "start": "npm start -w backend",
+    "test": "npm test -w backend",
+    "test:browser": "playwright test",
+    "format": "prettier --write backend/src backend/test frontend/src frontend/vite.config.js tests playwright.config.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "concurrently": "^9.2.1",
+    "prettier": "^3.10.1"
+  },
+  "engines": {
+    "node": ">=24.20.0"
+  }
+}
